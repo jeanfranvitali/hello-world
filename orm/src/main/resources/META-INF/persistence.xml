@@ -1,0 +1,18 @@
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+  version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+  <persistence-unit name="test" transaction-type="RESOURCE_LOCAL">
+    <class>com.jfvi.myapp.helloworld.entities.User</class>
+    <class>com.jfvi.myapp.helloworld.entities.Document</class>
+    <class>com.jfvi.myapp.helloworld.entities.Message</class>
+    <mapping-file>META-INF/orm.xml</mapping-file>
+    <properties>
+      <property name="javax.persistence.target-database" value="PostgreSQL" />
+      <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+      <property name="javax.persistence.jdbc.url"    value="jdbc:postgresql://localhost:5432/HelloWorld" />
+      <property name="javax.persistence.jdbc.user" value="postgres" />
+      <property name="javax.persistence.jdbc.password" value="vivi1004" />
+      <property name="javax.persistence.jdbc.schema" value="public" />
+    </properties>
+  </persistence-unit>
+</persistence>
